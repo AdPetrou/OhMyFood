@@ -1,0 +1,63 @@
+@use 'sass:math';
+
+@mixin CenterAlign{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+@mixin TextTitle{
+    font-family: $font-header;
+    font-style: italic;
+    font-weight: 400;
+    font-size: nth($list: $fontsize-headers, $n: 1);
+    @include CenterAlign;
+    line-height: 43.74px;
+    margin: 0;
+}
+
+@mixin TextSubtitle{
+    font-family: $font-default;
+    font-weight: 700;
+    font-size: nth($list: $fontsize-headers, $n: 2);
+    @include CenterAlign;
+    line-height: 28.13px;
+}
+
+@mixin TextEmphasised{
+    font-family: $font-default;
+    font-weight: 500;
+    font-size: nth($list: $fontsize-headers, $n: 4);
+    @include CenterAlign;
+    line-height: 18.75px;
+    margin: 0;
+}
+
+@mixin TextParagraph{
+    font-family: $font-default;
+    font-weight: 300;
+    font-size: $fontsize-paragraph;
+    @include CenterAlign;
+    line-height: 21.09px;
+    margin: 0;
+    color: $color-gray;
+}
+
+@mixin BoxShadowFade($length: 4px, $blur: 10px, $opacity: 15%){
+    box-shadow: 0px $length $blur lighten($color-shadow-base, 100% - $opacity);
+}
+
+@mixin ButtonRounded{
+    border-radius: 20px;
+    @include BoxShadowFade(15px);
+}
+
+@mixin ButtonGradientRounded{
+    border-radius: 25px;
+    border: 0;
+    @include BoxShadowFade(25%);
+    background: linear-gradient($color-pink, $color-primary);
+    @include TextEmphasised;
+    color: white;
+}

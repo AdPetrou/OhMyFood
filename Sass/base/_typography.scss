@@ -1,0 +1,16 @@
+
+h1{
+    @include TextTitle
+}
+
+h2{
+    @include TextSubtitle
+}
+
+h4{
+    @include TextEmphasised
+}
+
+p{
+    @include TextParagraph
+}
