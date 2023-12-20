@@ -1,0 +1,21 @@
+.__modifier-primary-colour{
+    color: $color-primary;
+}
+
+.__modifier-darken-background{
+    color: darken($color: $color-background, $amount: 40%);
+}
+
+.__modifier-button-gradient-round{
+    @include ButtonGradientRounded;
+    height: 50px;
+    width: 200px;
+    margin: 20px;
+}
+
+.__modifier-button-round{
+    @include ButtonRounded;
+    height: 75px;
+    width: 100%;
+    margin: 0;
+}

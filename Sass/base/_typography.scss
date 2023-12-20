@@ -1,16 +1,16 @@
 
 h1{
-    @include TextTitle
+    @include TextTitle;
 }
 
 h2{
-    @include TextSubtitle
+    @include TextSubtitle;
 }
 
 h4{
-    @include TextEmphasised
+    @include TextEmphasised;
 }
 
 p{
-    @include TextParagraph
+    @include TextParagraph;
 }

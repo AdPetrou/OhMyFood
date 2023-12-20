@@ -3,10 +3,6 @@ h1 {
   font-style: italic;
   font-weight: 400;
   font-size: 30px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   line-height: 43.74px;
   margin: 0;
 }
@@ -15,16 +11,12 @@ h2 {
   font-family: "Roboto", serif;
   font-weight: 700;
   font-size: 24px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   line-height: 28.13px;
 }
 
 h4 {
   font-family: "Roboto", serif;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 16px;
   text-align: center;
   justify-content: center;
@@ -47,6 +39,53 @@ p {
   color: #353535;
 }
 
+.__modifier-primary-colour {
+  color: #9356DC;
+}
+
+.__modifier-darken-background {
+  color: #909090;
+}
+
+.__modifier-button-gradient-round {
+  border-radius: 25px;
+  border: 0;
+  box-shadow: 0px 40% 10px #d9d9d9;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-family: "Roboto", serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  line-height: 18.75px;
+  margin: 0;
+  font-weight: 500;
+  height: 50px;
+  width: 200px;
+  margin: 20px;
+}
+
+.__modifier-button-round {
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0px 15px 10px #d9d9d9;
+  font-family: "Roboto", serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  line-height: 18.75px;
+  margin: 0;
+  height: 75px;
+  width: 100%;
+  margin: 0;
+}
+
 .block-header .__element-location {
   color: #353535;
   background-color: #EAEAEA;
@@ -56,6 +95,10 @@ p {
 .block-header .__element-title {
   height: 63px;
   box-shadow: 0px 2px 4px #d9d9d9;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   position: relative;
 }
 
@@ -72,25 +115,63 @@ p {
   gap: 20px;
 }
 .block-description .__element-subtitle {
-  position: relative;
-}
-
-.__modifier-button-gradient-round {
-  border-radius: 25px;
-  border: 0;
-  box-shadow: 0px 25% 10px #d9d9d9;
-  background: linear-gradient(#FF79DA, #9356DC);
-  font-family: "Roboto", serif;
-  font-weight: 500;
-  font-size: 16px;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: flex;
-  line-height: 18.75px;
-  margin: 0;
+  position: relative;
+}
+
+.block-instructions {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media only screen and (min-width: 992px) {
+  .block-instructions {
+    padding: 50px 180px 50px 180px;
+  }
+}
+.block-instructions .__element-grid {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 20px;
+  gap: 25px 25px;
+}
+@media only screen and (min-width: 992px) {
+  .block-instructions .__element-grid {
+    grid-template-columns: auto auto auto;
+    grid-auto-columns: 322px;
+  }
+}
+.block-instructions .__element-grid .__element-grid-item {
+  display: flex;
+  flex-direction: row;
+  background-color: #F6F6F6;
+  height: 75px;
+  border-radius: 20px;
+  padding-right: 10px;
+}
+.block-instructions .__element-grid .__element-grid-item .__element-label {
+  display: flex;
+  justify-content: flex-start;
+}
+.block-instructions .__element-grid .__element-grid-item .__element-label i {
+  padding: 28px;
+  position: relative;
+}
+.block-instructions .__element-grid .__element-grid-item .__element-label .__element-buttontext {
+  text-align: left;
+  position: relative;
+}
+.block-instructions .__element-grid .__element-grid-item .__element-numberlabel {
+  z-index: 100;
   color: white;
-  height: 50px;
-  width: 200px;
-  margin: 20px;
+  position: relative;
+  font-size: 14px;
+}
+.block-instructions .__element-grid .__element-grid-item .__element-numberlabel i {
+  z-index: -1;
+  color: #9356DC;
+  position: absolute;
+  font-size: 25px;
 }/*# sourceMappingURL=main.css.map */
