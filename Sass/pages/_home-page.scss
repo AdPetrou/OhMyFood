@@ -1,13 +1,23 @@
-.block-header{
+html {
+    height: 100%;
+}
 
-    & .__element-location{
-    color: $color-gray;
-    background-color: $color-gray-two;
-    gap: 17px;
-    height: 50px;
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-header {
+    & .__element-location {
+        color: $color-gray;
+        background-color: $color-gray-two;
+        gap: 17px;
+        height: 50px;
     }
 
-    & .__element-title{
+    & .__element-title {
         height: 63px;
         @include BoxShadowFade(2px, 4px);
         @include CenterAlign;
@@ -15,7 +25,7 @@
     }
 }
 
-.block-description{
+.block-description {
     height: fit-content;
     @include CenterAlign;
     flex-direction: column;
@@ -23,16 +33,16 @@
     padding: 20px;
     gap: 20px;
 
-    & .__element-subtitle{
+    & .__element-subtitle {
         @include CenterAlign;
         position: relative;
     }
 }
 
-.block-instructions{
+.block-instructions {
     @include BlockSize;
 
-    & .__element-grid{
+    & .__element-grid {
         padding: 10px;
 
         @media only screen and (min-width: 1200px) {
@@ -40,36 +50,36 @@
             grid-auto-columns: 322px;
         }
 
-        & .__element-grid-item{
+        & .__element-grid-item {
             background-color: $color-background;
             height: 75px;
             width: 322px;
 
-            & .__element-label{ 
+            & .__element-label {
                 display: flex;
                 justify-content: flex-start;
                 text-wrap: wrap;
                 margin-left: 20px;
 
-                & i{
+                & i {
                     padding: 28px;
                     position: relative;
                 }
 
-                & .__element-text{
+                & .__element-text {
                     text-align: left;
                     position: relative;
                 }
             }
 
-            & .__element-numberlabel{
+            & .__element-numberlabel {
                 z-index: 100;
                 color: white;
                 @include CenterAlign;
                 position: relative;
                 font-size: 14px;
 
-                & i{
+                & i {
                     z-index: -1;
                     color: $color-primary;
                     position: absolute;
@@ -80,22 +90,23 @@
     }
 }
 
-.block-restaurants{
+.block-restaurants {
     @include BlockSize;
     background-color: $color-background;
-    
-    & .__element-grid{
+
+    & .__element-grid {
         @media only screen and (min-width: 992px) {
             grid-template-columns: auto auto;
             grid-auto-columns: 490px;
+            column-gap: 10%;
         }
 
-        & .__element-grid-item{
+        & .__element-grid-item {
             flex-direction: column;
             height: 250px;
             max-width: 490px;
 
-            & figure{
+            & figure {
                 margin: 0;
                 overflow: hidden;
                 border-radius: 20px 20px 0 0;
@@ -107,7 +118,7 @@
                     object-fit: cover;
                 }
 
-                & figcaption{
+                & figcaption {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
@@ -116,18 +127,50 @@
 
                 & figcaption * {
                     margin: 0;
-                    padding: 1px 10px;            
+                    padding: 1px 10px;
                 }
 
-                & .__element-text{
+                & .__element-text {
                     display: flex;
                     flex-direction: column;
                 }
 
-                & i{
+                & i {
                     font-size: 22px;
-                }       
+                }
             }
+        }
+    }
+}
+
+.block-footer * {
+    color: white;
+}
+.block-footer {
+    background-color: $color-gray;
+    padding: 10px 20px;
+    @include SSColumnToRow(true, flex-start, center);
+    & .__element-title {
+        font-size: 16px;
+    }
+
+    & .__element-navbar * {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    & .__element-navbar {
+        @include LeftAlign;
+        @include SSColumnToRow(false, flex-start, center);   
+        padding-right: 30px;    
+
+        & .__element-navitem {
+            padding-right: 20px;
+            display: flex;
+            & i{
+                width: 15px;
+                padding-right: 10px;
+            }            
         }
     }
 }

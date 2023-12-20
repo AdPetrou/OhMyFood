@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: auto;
     gap: 25px 25px;
+    align-items: center;
+    justify-items: center;
 }
 
 .__element-grid-item{
@@ -9,4 +11,5 @@
     @include BoxShadowFade(4px, 15px);
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
