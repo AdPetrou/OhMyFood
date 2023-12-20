@@ -7,6 +7,10 @@ h2{
     @include TextSubtitle;
 }
 
+h3{
+    @include TextHeader;
+}
+
 h4{
     @include TextEmphasised;
 }

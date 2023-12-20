@@ -23,6 +23,13 @@
     line-height: 28.13px;
 }
 
+@mixin TextHeader{
+    font-family: $font-default;
+    font-weight: 700;
+    font-size: nth($list: $fontsize-headers, $n: 3);
+    line-height: 21.09px;
+}
+
 @mixin TextEmphasised{
     font-family: $font-default;
     font-weight: bold;
@@ -36,7 +43,6 @@
     font-family: $font-default;
     font-weight: 300;
     font-size: $fontsize-paragraph;
-    @include CenterAlign;
     line-height: 21.09px;
     margin: 0;
     color: $color-gray;
@@ -46,16 +52,19 @@
     box-shadow: 0px $length $blur lighten($color-shadow-base, 100% - $opacity);
 }
 
+@mixin BorderRounded($border-size: 20px){
+    border-radius: $border-size;
+    border-width: 0;
+}
+
 @mixin ButtonRounded{
-    border-radius: 20px;
-    border: 0;
+    @include BorderRounded;
     @include BoxShadowFade(15px);
     @include TextEmphasised;
 }
 
 @mixin ButtonGradientRounded{
-    border-radius: 25px;
-    border: 0;
+    @include BorderRounded(25px);
     @include BoxShadowFade(40%);
     @include PrimaryGradient;
     @include TextEmphasised;
@@ -65,4 +74,11 @@
 @mixin PrimaryGradient{
     background: linear-gradient($color-pink, $color-primary);
     color: white;
+}
+
+@mixin BlockSize{
+    padding: 30px 5px;
+    height: fit-content;
+    @media only screen and (min-width: 992px) { padding: 50px 180px;}
+    @media only screen and (min-width: 1650px) { padding: 50px 360px;}
 }

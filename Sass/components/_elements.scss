@@ -1,0 +1,12 @@
+.__element-grid{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 25px 25px;
+}
+
+.__element-grid-item{
+    @include BorderRounded;
+    @include BoxShadowFade(4px, 15px);
+    display: flex;
+    flex-direction: row;
+}
