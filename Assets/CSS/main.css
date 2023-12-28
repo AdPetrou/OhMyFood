@@ -14,6 +14,24 @@
     color: blue;
   }
 }
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 383px;
+}
+
 h1 {
   font-family: "Shrikhand", serif;
   font-style: italic;
@@ -49,6 +67,23 @@ h4 {
   margin: 0;
 }
 
+h5 {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21.09px;
+  margin: 0;
+  color: #353535;
+  font-size: 14px;
+  line-height: 18.75px;
+  text-transform: uppercase;
+  border: 0;
+  border-bottom: 3px solid;
+  -o-border-image: linear-gradient(to right, #99E2D0 10%, transparent 10%) 100% 0;
+     border-image: linear-gradient(to right, #99E2D0 10%, transparent 10%) 100% 0;
+  padding-bottom: 3px;
+}
+
 p {
   font-family: "Roboto", serif;
   font-weight: 300;
@@ -56,6 +91,56 @@ p {
   line-height: 21.09px;
   margin: 0;
   color: #353535;
+}
+
+.block-footer * {
+  color: white;
+}
+
+.block-footer {
+  position: relative;
+  background-color: #353535;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 992px) {
+  .block-footer {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+.block-footer .__element-title {
+  font-size: 16px;
+}
+.block-footer .__element-navbar * {
+  text-align: left;
+  font-size: 14px;
+}
+.block-footer .__element-navbar {
+  text-align: left;
+  justify-content: left;
+  align-items: flex-start;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .block-footer .__element-navbar {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.block-footer .__element-navbar .__element-navitem {
+  padding-right: 20px;
+  display: flex;
+}
+.block-footer .__element-navbar .__element-navitem i {
+  width: 15px;
+  padding-right: 10px;
 }
 
 .__element-grid {
@@ -73,6 +158,15 @@ p {
   display: flex;
   flex-direction: row;
   width: 100%;
+}
+
+.__element-title {
+  height: 63px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
 }
 
 .__modifier-primary-colour {
@@ -127,6 +221,14 @@ p {
   line-height: 19.92px;
 }
 
+.__modifier-title-fade {
+  box-shadow: 0px 2px 4px #d9d9d9;
+}
+
+.__modifier-gap {
+  gap: 40px;
+}
+
 .__element-like-button {
   border: 0;
   background-color: transparent;
@@ -159,6 +261,11 @@ p {
   opacity: 0;
 }
 
+.__element-explore-button {
+  justify-self: center;
+  box-shadow: 0px 4px 10px #bfbfbf;
+  margin: 20px 0px;
+}
 @media only screen and (min-width: 992px) {
   .__element-explore-button {
     transition: filter 0.2s linear;
@@ -168,34 +275,13 @@ p {
   }
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.block-header .__element-location {
+.page-home .block-header .__element-location {
   color: #353535;
   background-color: #EAEAEA;
   gap: 17px;
   height: 50px;
 }
-.block-header .__element-title {
-  height: 63px;
-  box-shadow: 0px 2px 4px #d9d9d9;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-
-.block-description {
+.page-home .block-description {
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
@@ -207,18 +293,14 @@ body {
   padding: 20px;
   gap: 20px;
 }
-.block-description .__element-subtitle {
+.page-home .block-description .__element-subtitle {
   text-align: center;
   justify-content: center;
   align-items: center;
   display: flex;
   position: relative;
 }
-.block-description .__element-explore-button {
-  box-shadow: 0px 4px 10px #bfbfbf;
-}
-
-.block-instructions {
+.page-home .block-instructions {
   padding: 30px 5px;
   margin: 0;
   height: -moz-fit-content;
@@ -228,49 +310,50 @@ body {
   width: 100%;
 }
 @media only screen and (min-width: 992px) {
-  .block-instructions {
+  .page-home .block-instructions {
     padding: 50px 180px;
   }
 }
 @media only screen and (min-width: 1650px) {
-  .block-instructions {
+  .page-home .block-instructions {
     padding: 50px 360px;
   }
 }
 @media only screen and (min-width: 2440px) {
-  .block-instructions {
+  .page-home .block-instructions {
     padding: 50px 720px;
   }
 }
-.block-instructions .__element-grid {
+.page-home .block-instructions .__element-grid {
   padding: 10px;
 }
 @media only screen and (min-width: 1200px) {
-  .block-instructions .__element-grid {
+  .page-home .block-instructions .__element-grid {
     grid-template-columns: auto auto auto;
     grid-auto-columns: 322px;
   }
 }
-.block-instructions .__element-grid .__element-grid-item {
+.page-home .block-instructions .__element-grid .__element-grid-item {
+  display: flex;
   background-color: #F6F6F6;
   height: 75px;
   width: 322px;
 }
-.block-instructions .__element-grid .__element-grid-item .__element-label {
+.page-home .block-instructions .__element-grid .__element-grid-item .__element-label {
   display: flex;
   justify-content: flex-start;
   text-wrap: wrap;
   margin-left: 20px;
 }
-.block-instructions .__element-grid .__element-grid-item .__element-label i {
+.page-home .block-instructions .__element-grid .__element-grid-item .__element-label i {
   padding: 28px;
   position: relative;
 }
-.block-instructions .__element-grid .__element-grid-item .__element-label .__element-text {
+.page-home .block-instructions .__element-grid .__element-grid-item .__element-label .__element-text {
   text-align: left;
   position: relative;
 }
-.block-instructions .__element-grid .__element-grid-item .__element-numberlabel {
+.page-home .block-instructions .__element-grid .__element-grid-item .__element-numberlabel {
   z-index: 100;
   color: white;
   text-align: center;
@@ -280,14 +363,13 @@ body {
   position: relative;
   font-size: 14px;
 }
-.block-instructions .__element-grid .__element-grid-item .__element-numberlabel i {
+.page-home .block-instructions .__element-grid .__element-grid-item .__element-numberlabel i {
   z-index: -1;
   color: #9356DC;
   position: absolute;
   font-size: 25px;
 }
-
-.block-restaurants {
+.page-home .block-restaurants {
   padding: 30px 5px;
   margin: 0;
   height: -moz-fit-content;
@@ -298,105 +380,103 @@ body {
   background-color: #F6F6F6;
 }
 @media only screen and (min-width: 992px) {
-  .block-restaurants {
+  .page-home .block-restaurants {
     padding: 50px 180px;
   }
 }
 @media only screen and (min-width: 1650px) {
-  .block-restaurants {
+  .page-home .block-restaurants {
     padding: 50px 360px;
   }
 }
 @media only screen and (min-width: 2440px) {
-  .block-restaurants {
+  .page-home .block-restaurants {
     padding: 50px 720px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .block-restaurants .__element-grid {
+  .page-home .block-restaurants .__element-grid {
     grid-template-columns: auto auto;
     grid-auto-columns: 490px;
     -moz-column-gap: 10%;
          column-gap: 10%;
   }
 }
-.block-restaurants .__element-grid .__element-grid-item {
+.page-home .block-restaurants .__element-grid .__element-grid-item {
   flex-direction: column;
   height: 250px;
   max-width: 490px;
 }
-.block-restaurants .__element-grid .__element-grid-item figure {
+.page-home .block-restaurants .__element-grid .__element-grid-item figure {
   margin: 0;
   overflow: hidden;
   border-radius: 20px 20px 0 0;
 }
-.block-restaurants .__element-grid .__element-grid-item figure img {
-  width: 100%;
+.page-home .block-restaurants .__element-grid .__element-grid-item figure img {
   height: 190px;
   padding-bottom: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.block-restaurants .__element-grid .__element-grid-item figure figcaption {
+.page-home .block-restaurants .__element-grid .__element-grid-item figure figcaption {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.block-restaurants .__element-grid .__element-grid-item figure figcaption * {
+.page-home .block-restaurants .__element-grid .__element-grid-item figure figcaption * {
   margin: 0;
   padding: 1px 10px;
 }
-.block-restaurants .__element-grid .__element-grid-item figure .__element-text {
+.page-home .block-restaurants .__element-grid .__element-grid-item figure .__element-text {
   display: flex;
   flex-direction: column;
 }
 
-.block-footer * {
-  color: white;
-}
-
-.block-footer {
-  background-color: #353535;
-  padding: 10px 20px;
+.page-menu .block-menu {
+  padding: 30px 5px;
+  width: auto;
+  background-color: #F6F6F6;
+  position: relative;
+  border: 1px;
+  border-radius: 40px 40px 0px 0px;
+  gap: 40px;
+  padding: 40px 20px;
+  margin-top: -40px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 @media only screen and (min-width: 992px) {
-  .block-footer {
-    flex-direction: row-reverse;
-    align-items: center;
+  .page-menu .block-menu {
+    padding: 50px 250px;
+    margin: -40px 200px -20px 200px;
   }
 }
-.block-footer .__element-title {
-  font-size: 16px;
-}
-.block-footer .__element-navbar * {
-  text-align: left;
-  font-size: 14px;
-}
-.block-footer .__element-navbar {
-  text-align: left;
-  justify-content: left;
-  align-items: flex-start;
+.page-menu .block-menu header {
   display: flex;
-  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.page-menu .block-menu .__element-menugrid {
+  flex: none;
+  display: grid;
+  grid-template-columns: none;
+  gap: 15px;
+}
+.page-menu .block-menu .__element-menugrid .__element-grid-item {
+  background-color: white;
+  padding: 10px;
   flex-direction: column;
-  align-items: flex-start;
-  padding-right: 30px;
 }
-@media only screen and (min-width: 992px) {
-  .block-footer .__element-navbar {
-    flex-direction: row;
-    align-items: center;
-  }
+.page-menu .block-menu .__element-menugrid .__element-grid-item h3 {
+  margin: 5px 5px;
 }
-.block-footer .__element-navbar .__element-navitem {
-  padding-right: 20px;
+.page-menu .block-menu .__element-menugrid .__element-grid-item .__element-label {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
 }
-.block-footer .__element-navbar .__element-navitem i {
-  width: 15px;
-  padding-right: 10px;
+.page-menu .block-menu .__element-menugrid .__element-grid-item .__element-label * {
+  text-align: start;
+  margin: 0px 0px 5px 5px;
+  font-size: 13px;
 }/*# sourceMappingURL=main.css.map */

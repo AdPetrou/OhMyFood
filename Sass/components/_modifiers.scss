@@ -24,3 +24,11 @@
     font-size: 15px;
     line-height: 19.92px;
 }
+
+.__modifier-title-fade{
+    @include BoxShadowFade(2px, 4px);
+}
+
+.__modifier-gap{
+    gap: 40px;
+}

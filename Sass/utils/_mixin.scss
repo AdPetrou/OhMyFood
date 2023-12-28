@@ -101,6 +101,12 @@
     @media only screen and (min-width: 2440px) { padding: 50px 720px;}
 }
 
+@mixin BlockSizeMenu{
+    padding: 30px 5px;
+    width: auto;
+    @media only screen and (min-width: 992px) { padding: 50px 250px; margin: -40px 200px -20px 200px;}
+}
+
 @mixin SSColumnToRow($reverse: false, $small-alignment: flex-start, $large-alignment: flex-start){
     display: flex;
     flex-direction: column;
