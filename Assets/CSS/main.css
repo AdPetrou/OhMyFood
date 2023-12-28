@@ -1,3 +1,19 @@
+@keyframes fade-out {
+  from {
+    color: black;
+  }
+  to {
+    color: transparent;
+  }
+}
+@keyframes fade-in {
+  from {
+    color: black;
+  }
+  to {
+    color: blue;
+  }
+}
 h1 {
   font-family: "Shrikhand", serif;
   font-style: italic;
@@ -111,6 +127,47 @@ p {
   line-height: 19.92px;
 }
 
+.__element-like-button {
+  border: 0;
+  background-color: transparent;
+}
+.__element-like-button i {
+  position: absolute;
+  font-size: 22px;
+  transition: opacity 0.2s linear;
+}
+.__element-like-button .fa-regular {
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: black;
+  opacity: 1;
+}
+.__element-like-button .fa-solid {
+  position: relative;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.__element-like-button:focus .fa-solid {
+  opacity: 1;
+}
+.__element-like-button:focus .fa-regular {
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .__element-explore-button {
+    transition: filter 0.2s linear;
+  }
+  .__element-explore-button:hover {
+    filter: brightness(1.2);
+  }
+}
+
 html {
   height: 100%;
 }
@@ -156,6 +213,9 @@ body {
   align-items: center;
   display: flex;
   position: relative;
+}
+.block-description .__element-explore-button {
+  box-shadow: 0px 4px 10px #bfbfbf;
 }
 
 .block-instructions {
@@ -290,9 +350,6 @@ body {
 .block-restaurants .__element-grid .__element-grid-item figure .__element-text {
   display: flex;
   flex-direction: column;
-}
-.block-restaurants .__element-grid .__element-grid-item figure i {
-  font-size: 22px;
 }
 
 .block-footer * {

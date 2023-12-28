@@ -1,0 +1,42 @@
+.__element-like-button{
+    border: 0;
+    background-color: transparent;
+    
+    & i {
+        position: absolute;
+        font-size: 22px;       
+        transition: opacity 0.2s linear;
+    }
+
+    & .fa-regular{          
+        background-clip: text;
+        color: black;
+        opacity: 1;
+    }
+
+    & .fa-solid{ 
+        position: relative;
+        @include PrimaryGradientText;
+        opacity: 0;
+    }
+
+    &:focus{
+        & .fa-solid {           
+            opacity: 1;
+        }
+
+        & .fa-regular{          
+            background-clip: text;
+            opacity: 0;
+        }
+    }
+}
+
+.__element-explore-button{
+    @media only screen and (min-width: 992px){
+        transition: filter 0.2s linear;
+        &:hover{
+            filter: brightness(1.2);
+        }
+    }
+}

@@ -83,6 +83,12 @@
     color: white;
 }
 
+@mixin PrimaryGradientText{
+    background: linear-gradient($color-pink, $color-primary);
+    background-clip: text;
+    color: transparent;
+}
+
 @mixin BlockSize{
     padding: 30px 5px;
     margin: 0;

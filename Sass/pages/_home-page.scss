@@ -37,6 +37,10 @@ body {
         @include CenterAlign;
         position: relative;
     }
+
+    & .__element-explore-button{
+        @include BoxShadowFade(4px, 10px, 25%);
+    }
 }
 
 .block-instructions {
@@ -133,10 +137,6 @@ body {
                 & .__element-text {
                     display: flex;
                     flex-direction: column;
-                }
-
-                & i {
-                    font-size: 22px;
                 }
             }
         }
