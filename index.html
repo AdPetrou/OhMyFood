@@ -15,20 +15,25 @@
     <link rel="stylesheet" href="./Assets/CSS/main.css">
 </head>
 <body class="page-home">
+    <section class="block-loader">
+        <div class="__element-loader"></div>
+    </section>
     <!-- Header Block -->
     <header class="block-header">
         <!-- Title -->
-        <h1 class="__element-title __modifier-title-fade"> ohmyfood </h1>
+        <img class="__element-logo" src="./Assets/images/logo/ohmyfood.png">
         <!-- Location -->
-        <h4 class="__element-location"> <i class="fa-solid fa-location-dot"></i> Islington, London </h4>
     </header>
     <!-- Main Block -->
-    <div class="block-main">
+    <section class="block-main">
         <!-- Website intro and navigation -->
+        <h4 class="__element-location"> <i class="fa-solid fa-location-dot"></i> Islington, London </h4>
         <section class="block-description">
             <h2 class="__element-subtitle"> Book the meal you want </h2>
             <p class="__element-text"> Discover our carefully selected high-end restaurants </p>
-            <button class="__element-explore-button __modifier-button-gradient-round"> Explore our restaurants </button>
+            <form action="#restaurant-section">
+                <button class="__element-explore-button __modifier-button-gradient-round"> Explore our restaurants </button>
+            </form>
         </section>
 
         <!-- Instruction Grid -->
@@ -65,11 +70,11 @@
 
         <!-- Restaurant Grid -->
 
-        <section class="block-restaurants">
+        <section class="block-restaurants" id="restaurant-section">
             <h2 class="__element-subtitle"> Restaurants </h2>
             <div class="__element-grid">
 
-                <div class="__element-grid-item">
+                <a class="__element-grid-item" href="menu-kitchenwest.html">
                     <figure>
                         <img src="./Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Jay Wennington food">
                         <figcaption>
@@ -83,7 +88,7 @@
                             </button>
                         </figcaption>
                     </figure>
-                </div>
+                </a>
             
                 <div class="__element-grid-item">
                     <figure>
@@ -145,5 +150,5 @@
                 <div class="__element-navitem"> <p>Contact</p> </div>
             </nav>
         </footer>
-    </div>
+    </section>
 </body>

@@ -19,10 +19,13 @@
     <!-- Header Block -->
     <header class="block-header">
         <!-- Title -->
-        <h1 class="__element-title"> ohmyfood </h1>
-        <img src="./Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Jay Wennington food">
+        <form action="index.html">
+            <button class="__element-back-button"><i class="fa-solid fa-arrow-left"></i></button>
+        </form>
+        <img class="__element-logo" src="./Assets/images/logo/ohmyfood.png">
     </header>
-    
+    <!-- Main Block -->
+    <img src="./Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Jay Wennington food">
     <section class="block-menu">
         <header>
             <h1 class="__element-menutitle"> Kitchen West </h1>
@@ -32,85 +35,113 @@
             </button>
         </header>
         <div class="__element-menugrid __modifier-gap">
-            <div class="__element-menugrid">
+            <div class="__element-menugrid" style="--index: 0;"> 
                 <h5>Starters</h5>
-                <button class="__element-grid-item">
-                    <h3>Smoked salmon</h3>
-                    <article class="__element-label">
-                        <p class="__modifier-sub-text"> With beetroot and horseradish dressing </p>
-                        <h4>£25</h4>
-                    </article>
-                </button>
+                <div class="__element-grid-item">
+                    <div class="__element-text">
+                        <h3>Smoked salmon</h3>
+                        <article class="__element-label">
+                            <p class="__modifier-sub-text"> With beetroot and horseradish dressing </p>
+                            <h4>£25</h4>
+                        </article>
+                    </div>
+                    <button class="__element-add-button"><i class="fa-solid fa-circle-check"></i></button>
+                </div>
 
-                <button class="__element-grid-item">
-                    <h3>Ham hock terrine</h3>
-                    <article class="__element-label">
-                        <p class="__modifier-sub-text"> With piccalilli </p>
-                        <h4>£35</h4>
-                    </article>
-                </button>
+                <div class="__element-grid-item">
+                    <div class="__element-text">
+                        <h3>Ham hock terrine</h3>
+                        <article class="__element-label">
+                            <p class="__modifier-sub-text"> With piccalilli </p>
+                            <h4>£35</h4>
+                        </article>
+                    </div>
+                    <button class="__element-add-button"><i class="fa-solid fa-circle-check"></i></button>
+                </div>
 
-                <button class="__element-grid-item">
-                    <h3>Poached egg</h3>
-                    <article class="__element-label">
-                        <p class="__modifier-sub-text"> With asparagus and hollandaise </p>
-                        <h4>£20</h4>
-                    </article>
-                </button>
+                <div class="__element-grid-item">
+                    <div class="__element-text">
+                        <h3>Poached egg</h3>
+                        <article class="__element-label">
+                            <p class="__modifier-sub-text"> With asparagus and hollandaise </p>
+                            <h4>£20</h4>
+                        </article>
+                    </div>
+                    <button class="__element-add-button"><i class="fa-solid fa-circle-check"></i></button>
+                </div>
             </div>
 
-            <div class="__element-menugrid">
+            <div class="__element-menugrid" style="--index: 1;">
                 <h5>Mains</h5>
-                <button class="__element-grid-item">
-                    <h3>Beef fillet with herb butter</h3>
-                    <article class="__element-label">
-                        <p class="__modifier-sub-text"> Served with a vegetable medley </p>
-                        <h4>£40</h4>
-                    </article>
-                </button>
+                <div class="__element-grid-item">
+                    <div class="__element-text">
+                        <h3>Beef fillet with herb butter</h3>
+                        <article class="__element-label">
+                            <p class="__modifier-sub-text"> Served with a vegetable medley </p>
+                            <h4>£40</h4>
+                        </article>
+                    </div>
+                    <button class="__element-add-button"><i class="fa-solid fa-circle-check"></i></button>
+                </div>
 
-                <button class="__element-grid-item">
-                    <h3>Braised oxtail cottage pie</h3>
-                    <article class="__element-label">
-                        <p class="__modifier-sub-text"> With black truffle and parsnip puree </p>
-                        <h4>£35</h4>
-                    </article>
-                </button>
+                <div class="__element-grid-item">
+                    <div class="__element-text">
+                        <h3>Braised oxtail cottage pie</h3>
+                        <article class="__element-label">
+                            <p class="__modifier-sub-text"> With black truffle and parsnip puree </p>
+                            <h4>£35</h4>
+                        </article>
+                    </div>
+                    <button class="__element-add-button"><i class="fa-solid fa-circle-check"></i></button>
+                </div>
 
-                <button class="__element-grid-item">
-                    <h3>Fillet of turbot</h3>
-                    <article class="__element-label">
-                        <p class="__modifier-sub-text"> With citrus dressing </p>
-                        <h4>£44</h4>
-                    </article>
-                </button>
+                <div class="__element-grid-item">
+                    <div class="__element-text">
+                        <h3>Fillet of turbot</h3>
+                        <article class="__element-label">
+                            <p class="__modifier-sub-text"> With citrus dressing </p>
+                            <h4>£44</h4>
+                        </article>
+                    </div>
+                    <button class="__element-add-button"><i class="fa-solid fa-circle-check"></i></button>
+                </div>
             </div>
 
-            <div class="__element-menugrid">
+            <div class="__element-menugrid" style="--index: 2;">
                 <h5>Desserts</h5>
-                <button class="__element-grid-item">
-                    <h3>Treacle tart</h3>
-                    <article class="__element-label">
-                        <p class="__modifier-sub-text"> With Cornish clotted cream </p>
-                        <h4>£18</h4>
-                    </article>
-                </button>
+                <div class="__element-grid-item">
+                    <div class="__element-text">
+                        <h3>Treacle tart</h3>
+                        <article class="__element-label">
+                            <p class="__modifier-sub-text"> With Cornish clotted cream </p>
+                            <h4>£18</h4>
+                        </article>
+                    </div>
+                    <button class="__element-add-button"><i class="fa-solid fa-circle-check"></i></button>
+                </div>
 
-                <button class="__element-grid-item">
-                    <h3>Lemon posset </h3>
-                    <article class="__element-label">
-                        <p class="__modifier-sub-text"> With shortbread biscuit </p>
-                        <h4>£22</h4>
-                    </article>
-                </button>
+                <div class="__element-grid-item">
+                    <div class="__element-text">
+                        <h3>Lemon posset </h3>
+                        <article class="__element-label">
+                            <p class="__modifier-sub-text"> With shortbread biscuit </p>
+                            <h4>£22</h4>
+                        </article>
+                    </div>
+                    <button class="__element-add-button"><i class="fa-solid fa-circle-check"></i></button>
+                </div>
 
-                <button class="__element-grid-item">
-                    <h3>Chocolate mousse </h3>
-                    <article class="__element-label">
-                        <p class="__modifier-sub-text"> With a hint of chili and a hazelnut tuile </p>
-                        <h4>£23</h4>
-                    </article>
-                </button>
+                <div class="__element-grid-item">
+                    <div class="__element-text">
+                        <h3>Chocolate mousse </h3>
+                        <article class="__element-label">
+                            <p class="__modifier-sub-text"> With a hint of chili and a hazelnut tuile </p>
+                            <h4>£23</h4>
+                        </article>
+                    </div>
+                    <button class="__element-add-button"><i class="fa-solid fa-circle-check"></i></button>
+                </div>
+                
             </div>
 
             <button class="__element-explore-button __modifier-button-gradient-round"> Order  </button>

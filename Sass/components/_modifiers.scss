@@ -23,10 +23,13 @@
 .__modifier-sub-text{
     font-size: 15px;
     line-height: 19.92px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .__modifier-title-fade{
-    @include BoxShadowFade(2px, 4px);
+    @include BoxShadowFade(15%, 2px, 4px);
 }
 
 .__modifier-gap{

@@ -1,12 +1,26 @@
 .page-home{
 
-& .block-header {
-    & .__element-location {
-        color: $color-gray;
-        background-color: $color-gray-two;
-        gap: 17px;
-        height: 50px;
-    }
+& .block-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* Set the background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    animation: fadeOut 0.5s forwards;
+    animation-delay: 2s;
+    z-index: 999;
+}
+
+& .block-main .__element-location {
+    color: $color-gray;
+    background-color: $color-gray-two;
+    gap: 17px;
+    height: 50px;
 }
 
 & .block-description {
@@ -116,6 +130,10 @@
                 & .__element-text {
                     display: flex;
                     flex-direction: column;
+                }
+
+                & button{
+                    z-index: 1;         
                 }
             }
         }

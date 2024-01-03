@@ -1,5 +1,25 @@
 .page-menu{
 
+& .block-header{
+    display: flex;
+    justify-content: center;
+
+    & form{
+        display: flex;
+        justify-content: center;
+    }
+    
+    & form *{
+        background-color: transparent;
+        color: black;
+        border: 0;
+    }
+
+    & .__element-title{
+        margin: auto;
+    }
+}
+
 & .block-menu{
     @include BlockSizeMenu;
     background-color: $color-background;
@@ -23,28 +43,47 @@
         display: grid;
         grid-template-columns: none;
         gap: 15px;
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+        animation-delay: calc(0.5s * var(--index));
 
         & .__element-grid-item{
             background-color: white;
-            padding: 10px;
-            flex-direction: column;
+            min-width: 0;
+            min-height: 0;
+            overflow: hidden;
+
+            &:hover{
+                & .__element-add-button{
+                    width: 60px;
+                    & i{
+                        scale: 1.2;
+                    }
+                }
+            }
+
             & h3{
                 margin: 5px 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
-            & .__element-label {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 95%;
-            }        
-            & .__element-label * {
-                text-align: start;
-                margin: 0px 0px 5px 5px;
-                font-size: 13px;
+            & .__element-text{
+
+                & .__element-label {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 98%;
+                }        
+                & .__element-label * {
+                    text-align: start;
+                    margin: 0px 0px 5px 5px;
+                    font-size: 13px;
+                }
             }
         }
-
     }
 }
 

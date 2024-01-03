@@ -55,7 +55,7 @@
     color: $color-gray;
 }
 
-@mixin BoxShadowFade($length: 4px, $blur: 10px, $opacity: 15%){
+@mixin BoxShadowFade($opacity: 15%, $length: 4px, $blur: 10px){
     box-shadow: 0px $length $blur lighten($color-shadow-base, 100% - $opacity);
 }
 
@@ -66,13 +66,11 @@
 
 @mixin ButtonRounded{
     @include BorderRounded;
-    @include BoxShadowFade(15px);
     @include TextEmphasised;
 }
 
 @mixin ButtonGradientRounded{
     @include BorderRounded(25px);
-    @include BoxShadowFade(40%);
     @include PrimaryGradient;
     @include TextEmphasised;
     font-weight: 500;
@@ -104,7 +102,9 @@
 @mixin BlockSizeMenu{
     padding: 30px 5px;
     width: auto;
-    @media only screen and (min-width: 992px) { padding: 50px 250px; margin: -40px 200px -20px 200px;}
+    @media only screen and (min-width: 992px) { padding: 50px 100px; margin: -40px 100px -20px 100px;}
+    @media only screen and (min-width: 1285px) { padding: 50px 250px; margin: -40px 200px -20px 200px;}
+    @media only screen and (min-width: 2200px) { margin: -80px 600px -40px 700px;}
 }
 
 @mixin SSColumnToRow($reverse: false, $small-alignment: flex-start, $large-alignment: flex-start){
