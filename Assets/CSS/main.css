@@ -70,7 +70,7 @@ h1 {
   font-family: "Shrikhand", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 43.74px;
   margin: 0;
 }
@@ -579,14 +579,14 @@ p {
 }
 @media only screen and (min-width: 992px) {
   .page-menu .block-menu {
-    padding: 50px 100px;
-    margin: -40px 100px -20px 100px;
+    padding: 50px 150px;
+    margin: -40px 100px -20px 200px;
   }
 }
-@media only screen and (min-width: 1285px) {
+@media only screen and (min-width: 1441px) {
   .page-menu .block-menu {
     padding: 50px 250px;
-    margin: -40px 200px -20px 200px;
+    margin: -40px 200px -20px 300px;
   }
 }
 @media only screen and (min-width: 2200px) {
@@ -598,6 +598,11 @@ p {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+}
+@media only screen and (min-width: 992px) {
+  .page-menu .block-menu header {
+    justify-content: space-evenly;
+  }
 }
 .page-menu .block-menu .__element-menugrid {
   flex: none;

@@ -35,6 +35,9 @@
     & header{
         display: flex;
         justify-content: space-between;
+        @media only screen and (min-width: 992px){
+            justify-content: space-evenly;
+        }
         flex-direction: row;    
     }
 

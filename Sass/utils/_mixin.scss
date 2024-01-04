@@ -102,8 +102,8 @@
 @mixin BlockSizeMenu{
     padding: 30px 5px;
     width: auto;
-    @media only screen and (min-width: 992px) { padding: 50px 100px; margin: -40px 100px -20px 100px;}
-    @media only screen and (min-width: 1285px) { padding: 50px 250px; margin: -40px 200px -20px 200px;}
+    @media only screen and (min-width: 992px) { padding: 50px 150px; margin: -40px 100px -20px 200px;}
+    @media only screen and (min-width: 1441px) { padding: 50px 250px; margin: -40px 200px -20px 300px;}
     @media only screen and (min-width: 2200px) { margin: -80px 600px -40px 700px;}
 }
 
