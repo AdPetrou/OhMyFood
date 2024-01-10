@@ -293,6 +293,13 @@ p {
   gap: 40px;
 }
 
+.__modifier-boxshadow-none {
+  box-shadow: none;
+}
+.__modifier-boxshadow-none:hover {
+  box-shadow: none;
+}
+
 .__element-like-button {
   border: 0;
   background-color: transparent;
@@ -453,6 +460,9 @@ p {
   height: 75px;
   width: 322px;
 }
+.page-home .block-instructions .__element-grid .__element-grid-item:hover .__element-label i {
+  color: #9356DC;
+}
 .page-home .block-instructions .__element-grid .__element-grid-item .__element-label {
   display: flex;
   justify-content: flex-start;
@@ -462,6 +472,7 @@ p {
 .page-home .block-instructions .__element-grid .__element-grid-item .__element-label i {
   padding: 28px;
   position: relative;
+  transition: color 0.2s linear;
 }
 .page-home .block-instructions .__element-grid .__element-grid-item .__element-label .__element-text {
   text-align: left;

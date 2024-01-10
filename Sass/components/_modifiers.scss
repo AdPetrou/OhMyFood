@@ -35,3 +35,10 @@
 .__modifier-gap{
     gap: 40px;
 }
+
+.__modifier-boxshadow-none{
+    box-shadow: none;
+    &:hover{
+        box-shadow: none;
+    }
+}

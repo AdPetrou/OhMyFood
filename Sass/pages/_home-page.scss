@@ -53,6 +53,9 @@
             background-color: $color-background;
             height: 75px;
             width: 322px;
+            &:hover{
+                .__element-label i {color: $color-primary;}
+            }
 
             & .__element-label {
                 display: flex;
@@ -63,6 +66,7 @@
                 & i {
                     padding: 28px;
                     position: relative;
+                    transition: color 0.2s linear;
                 }
 
                 & .__element-text {
